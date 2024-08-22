@@ -1,2 +1,4 @@
 # bookstore
-Ebac curso: Aprendendo sobre Django 
+
+### Objetivo: 
+Aplicação do Módulo Django Rest Framework. 
