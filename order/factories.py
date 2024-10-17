@@ -11,8 +11,11 @@ class UserFactory(factory.django.DjangoModelFactory):
         model = User
 
 
-
 class OrderFactory(factory.django.DjangoModelFactory):
+
+    class Meta:
+        model = Order 
+        
     user = factory.SubFactory(UserFactory)
 
     @factory.post_generation
@@ -23,5 +26,4 @@ class OrderFactory(factory.django.DjangoModelFactory):
             for product in extracted:
                 self.product.add(product)
 
-    class Meta:
-        model = Order 
+    
